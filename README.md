@@ -57,8 +57,8 @@ check_accuracy(test_dataloader,
 The source Python code is in [Symphysis_Fetal_Head_Segmentation](Symphysis_Fetal_Head_Segmentation.ipynb). Our network is built with [Segmentation Models Pytorch (SMP)](https://github.com/qubvel/segmentation_models.pytorch) library [5]. To replicate the results of our work, execute **Dataset Preparation** part and **Training Model** part sequencely.
 
 ## Reference
-[1] Lu, Y., Zhou, M., Zhi, D., Zhou, M., Jiang, X., Qiu, R., Ou, Z., Wang, H., Qiu, D., Zhong, M., Lu, X., Chen, G., & Bai, J. (2022). The JNU-IFM dataset for segmenting pubic symphysis-fetal head. Data in Brief, 41, 107904.
-[2] Yu, X., Wang, J., Zhao, Y., & Gao, Y. (2023). Mix-ViT: Mixing attentive vision transformer for ultra-fine-grained visual categorization. Pattern Recognition, 135, 109131.
-[3] Ronneberger, O., Fischer, P., Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. In: Navab, N., Hornegger, J., Wells, W., Frangi, A. (eds) Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015. MICCAI 2015. Lecture Notes in Computer Science(), vol 9351. Springer, Cham. https://doi-org.ucd.idm.oclc.org/10.1007/978-3-319-24574-4_28
-[4] Terrance DeVries, & Graham W. Taylor. (2017). Improved Regularization of Convolutional Neural Networks with Cutout.
-[5] Iakubovskii, P., "Segmentation Models Pytorch." (2019).
+<a id="1">[1]</a> Lu, Y., Zhou, M., Zhi, D., Zhou, M., Jiang, X., Qiu, R., Ou, Z., Wang, H., Qiu, D., Zhong, M., Lu, X., Chen, G., & Bai, J. (2022). The JNU-IFM dataset for segmenting pubic symphysis-fetal head. Data in Brief, 41, 107904.
+<a id="2">[2]</a> Yu, X., Wang, J., Zhao, Y., & Gao, Y. (2023). Mix-ViT: Mixing attentive vision transformer for ultra-fine-grained visual categorization. Pattern Recognition, 135, 109131.
+<a id="3">[3]</a> Ronneberger, O., Fischer, P., Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. In: Navab, N., Hornegger, J., Wells, W., Frangi, A. (eds) Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015. MICCAI 2015. Lecture Notes in Computer Science(), vol 9351. Springer, Cham. https://doi-org.ucd.idm.oclc.org/10.1007/978-3-319-24574-4_28
+<a id="4">[4]</a> Terrance DeVries, & Graham W. Taylor. (2017). Improved Regularization of Convolutional Neural Networks with Cutout.
+<a id="5">[5]</a> Iakubovskii, P., "Segmentation Models Pytorch." (2019).
