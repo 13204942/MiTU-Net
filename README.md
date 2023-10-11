@@ -36,14 +36,16 @@ Our U-Net [3] architecture contains the contracting path ("encoder") and the exp
 ## Inference
 Go to [Symphysis_Fetal_Head_Segmentation](Symphysis_Fetal_Head_Segmentation.ipynb) to extract the codes of evaluation to do inference. An example of inference code is as below:
 ```python
-def load_checkpoint(checkpoint):
-    print("=> Loading checkpoint")
-    return torch.load(checkpoint)
-  
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
 model_prefix = 'unet_mit_b0_model_2808'
 save_path = root_path + f'/models/'
 checkpoint_name = save_path + f"{model_prefix}_model.pt"
-model = load_checkpoint(checkpoint_name)
+print("=> Loading checkpoint")
+model = torch.load(checkpoint_name)
+
+test_pix_acc = []
+test_dice_scores = []
 
 # check accuracy
 check_accuracy(test_dataloader,
