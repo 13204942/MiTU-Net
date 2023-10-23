@@ -15,7 +15,7 @@ _Figure 1. Example of reference organ-at-risk (OAR) segmentations, displayed as 
 
 ## Network Architecture
 Our U-Net [3] architecture contains the contracting path ("encoder") and the expansive path ("decoder"). They both have the same depth of four layers. Between encoder and decoder, we use skip connections to concatenating features from the Mix Transformer [2] encoder to recover spatial information lost during downsampling. We first transpose the original ultrasound image of size $3 × 256 × 256$ to size of $256 × 256 × 3$. Then the Mix Transformer encoder divides the ultrasound image into small patches of size 4 × 4. These patches are the input to the Mix Transformer encoder to obtain multi-level features at ${\frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{32}}$ of the original image resolution. The encoder passes the multi-level features to the decoder to predict the segmentation mask at a $\frac{H}{4} × \frac{W}{4} × N_{cls}$ resolution, where $N_{cls}$ is the number of categories. \
-![Network architecture](img/MiTU_Net.png)
+![Network architecture](https://github.com/13204942/MiTU-Net/blob/main/img/MiTU_Net.png)
 
 ## Data Augmentation
 * Rotation: random angle from $(−25°, 25°)$
@@ -36,14 +36,16 @@ Our U-Net [3] architecture contains the contracting path ("encoder") and the exp
 ## Inference
 Go to [Symphysis_Fetal_Head_Segmentation](Symphysis_Fetal_Head_Segmentation.ipynb) to extract the codes of evaluation to do inference. An example of inference code is as below:
 ```python
-def load_checkpoint(checkpoint):
-    print("=> Loading checkpoint")
-    return torch.load(checkpoint)
-  
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
 model_prefix = 'unet_mit_b0_model_2808'
 save_path = root_path + f'/models/'
 checkpoint_name = save_path + f"{model_prefix}_model.pt"
-model = load_checkpoint(checkpoint_name)
+print("=> Loading checkpoint")
+model = torch.load(checkpoint_name)
+
+test_pix_acc = []
+test_dice_scores = []
 
 # check accuracy
 check_accuracy(test_dataloader,
