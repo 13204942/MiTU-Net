@@ -1,4 +1,8 @@
-# MiTU-Net
+## MiTU-Net: A fine-tuned U-Net with SegFormer backbone for segmenting pubic symphysis-fetal head
+This project is an implementation of the paper ["MiTU-Net: A fine-tuned U-Net with SegFormer backbone for segmenting 
+pubic symphysis-fetal head"](https://arxiv.org/abs/2401.15513), achieved 5th place at [MICCAI 2023 FH-PS-AOP Challenge](https://ps-fh-aop-2023.grand-challenge.org/). The challenge report is published at [Medical Image Analysis](https://www-sciencedirect-com.ucd.idmoclcorg/science/article/pii/S1361841524002780).
+
+## MiTU-Net
 ![MICCAI 2023](img/miccai2023.png)
 
 ## Introduction
@@ -64,3 +68,34 @@ The source Python code is in [Symphysis_Fetal_Head_Segmentation](Symphysis_Fetal
 <a id="3">[3]</a> Ronneberger, O., Fischer, P., Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. In: Navab, N., Hornegger, J., Wells, W., Frangi, A. (eds) Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015. MICCAI 2015. Lecture Notes in Computer Science(), vol 9351. Springer, Cham. https://doi-org.ucd.idm.oclc.org/10.1007/978-3-319-24574-4_28 \
 <a id="4">[4]</a> Terrance DeVries, & Graham W. Taylor. (2017). Improved Regularization of Convolutional Neural Networks with Cutout. \
 <a id="5">[5]</a> Iakubovskii, P., "Segmentation Models Pytorch." (2019).
+
+## Citation
+```shell
+@ARTICLE{Bai2024-oz,
+  title    = "{PSFHS} Challenge Report: Pubic Symphysis and Fetal Head
+              Segmentation from Intrapartum Ultrasound Images",
+  author   = "Bai, Jieyun and Zhou, Zihao and Ou, Zhanhong and Koehler, Gregor
+              and Stock, Raphael and Maier-Hein, Klaus and Elbatel, Marawan and
+              Mart{\'\i}, Robert and Li, Xiaomeng and Qiu, Yaoyang and Gou,
+              Panjie and Chen, Gongping and Zhao, Lei and Zhang, Jianxun and
+              Dai, Yu and Wang, Fangyijie and Silvestre, Gu{\'e}nol{\'e} and
+              Curran, Kathleen and Sun, Hongkun and Xu, Jing and Cai, Pengzhou
+              and Jiang, Lu and Lan, Libin and Ni, Dong and Zhong, Mei and
+              Chen, Gaowen and Campello, V{\'\i}ctor M and Lu, Yaosheng and
+              Lekadir, Karim",
+  journal  = "Medical Image Analysis",
+  pages    = "103353",
+  month    =  sep,
+  year     =  2024,
+  keywords = "Intrapartum ultrasound; fetal biometry; deep learning; challenge;
+              angle of progress; image segmentation"
+}
+
+@misc{wang2024-mitunet,
+  title   = "MiTU-Net: A fine-tuned U-Net with SegFormer backbone for segmenting pubic symphysis-fetal head", 
+  author  = "Wang, Fangyijie and Silvestre, Guenole and Curran, Kathleen M.",
+  year    = 2024,
+  eprint  = "2401.15513",
+  url     = "https://arxiv.org/abs/2401.15513", 
+}
+```
